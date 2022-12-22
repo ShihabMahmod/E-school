@@ -35,19 +35,15 @@ class PaymentSetComponent extends Component
         
     }
     public function updated($teacher_id){
-        
 
-        if(!is_null($teacher_id)){
-            try{
+          
                 $this->select_data = teacher::join('Users','Users.roll',"=",'teachers.teacher_id')
                                  ->where('teachers.teacher_id',$this->teacher_id)
-                                 ->get(); 
+                                 ->get()
+                                 ->first();             
                                                                             
-
-       }catch(\Exception $e){
-           session()->flash('msg',$e->getMessage());
-       }
-        }
+            $this->amount = 0;
+      
         $this->mount();
     }
     public function setPayment()

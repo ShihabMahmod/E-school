@@ -12,6 +12,7 @@ use App\Http\Livewire\Student\studentProfileComponent;
 use App\Http\Livewire\Student\studentPersonalInfoComponent;
 use App\Http\Livewire\Student\studentRoutinComponent;
 use App\Http\Livewire\student\studentListComponent;
+use App\Http\Livewire\student\studentAttendanceComponent;
 
 
 use App\Http\Livewire\admin\adminLoginComponent;
@@ -21,6 +22,7 @@ use App\Http\Livewire\admin\classTeacherComponent;
 use App\Http\Livewire\admin\subjectComponent;
 use App\Http\Livewire\admin\subjectListComponent;
 use App\Http\Livewire\admin\paymentSetComponent;
+use App\Http\Livewire\admin\setStudentPaymentCompoonent;
 
 
 
@@ -56,6 +58,7 @@ Route::get('/register',registerComponent::class);
 Route::get('/student-profile',studentProfileComponent::class)->middleware('checkStudent');
 Route::get('/student-personal-information',studentPersonalInfoComponent::class);
 Route::get('/student-routin',studentRoutinComponent::class);
+Route::get('/sudent-attendance',studentAttendanceComponent::class);
 
 
 /*...................admin....................*/
@@ -67,6 +70,7 @@ Route::get('/student-list',studentListComponent::class);
 Route::get('/assign-class-teacher',classTeacherComponent::class);
 Route::get('/subject-list',subjectListComponent::class);
 Route::get('/set-payment',paymentSetComponent::class);
+Route::get('/set-student-payment',setStudentPaymentCompoonent::class);
 
 
 /*..................Teacher......................*/
@@ -76,6 +80,7 @@ Route::get('/teacher-personal-information',teacherPersonanInfoComponent::class);
 Route::get('/teacher-list',teacherListComponent::class);
 Route::get('/class-teacher-list',classTeacherListComponent::class);
 Route::get('/add-subject',subjectComponent::class);
+
 
 
 

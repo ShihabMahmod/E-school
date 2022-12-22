@@ -9,7 +9,7 @@
           Set all employee selary!! 
         </h2>
       </div>
-      <form wire:submit.prevent="setPayment" form-group>
+      <form wire:submit.prevent="setPayment" class="form-group">
         <div class="contact_form-container">
           <div>
             @if(session()->has('msg'))
@@ -26,21 +26,17 @@
            
             @if($select_data)
             <div>
-                <input wire:model="teacher_name" type="text" hidden>
+                <input wire:model="teacher_name" vlaue="{{$select_data['name']}}" type="text" hidden>
             </div>
             <div>
-            <select wire:model="designation" class="form-control mt-5">
-              @foreach($select_data as $teachers)  
-                <option value="{{$teachers['designation']}}">{{$teachers['designation']}}</option>
-               @endforeach 
+            <select wire:model="designation" class="form-control mt-5"> 
+                <option value="{{$select_data['designation']}}">{{$select_data['designation']}}</option>
               </select>
             </div>
 
             <div>
             <select wire:model="phone" class="form-control mt-5">
-              @foreach($select_data as $teachers)  
-                <option value="{{$teachers['phone']}}">{{$teachers['phone']}}</option>
-               @endforeach 
+                <option value="{{$select_data['phone']}}">{{$select_data['phone']}}</option>
               </select>
             </div>
 
@@ -51,11 +47,8 @@
             <div class="mt-5 ">
               <button type="submit">Save Amount</button>
             </div>
-
           </div>
-
         </div>
-
       </form>
     </div>
     <div class="col-md-6">

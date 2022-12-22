@@ -124,31 +124,28 @@
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
                 <p class="mb-4">School Management</p>
-                <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <a href="{{url('/set-payment')}}">Employee Selary Entry</a>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="mt-4 mb-1" style="font-size: .77rem;">Student Paymnent</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="mt-4 mb-1" style="font-size: .77rem;">School Unitility Bill</p>
-                <div class="progress rounded" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="mt-4 mb-1" style="font-size: .77rem;">Remaining</p>
-                <div class="progress rounded mb-2" style="height: 5px;">
-                  <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+                <ul class="list-group list-group-flush rounded-3">
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                  <i class=" fa fa-users text-warning"></i>
+                    <a href="{{url('/set-payment')}}" class="text-warning">Set Staff Payment</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class=" fa fa-duotone fa-graduation-cap text-warning"></i>
+                    <a href="{{url('/set-student-payment')}}" class="text-warning" class="text-warning">Set Student Payment</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fa fa-user text-warning"></i>
+                    <a href="{{url('/subject-list')}}" class="text-warning">Subject List</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class="fa fa-users text-warning" style="color: #ac2bac;"></i>
+                    <a href="" class="text-warning">Add Somthing</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                    <i class=" fa fa-book text-warning"></i>
+                    <a href="" class="text-warning">Add Somthing</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

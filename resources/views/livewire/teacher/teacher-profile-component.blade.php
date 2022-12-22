@@ -20,7 +20,7 @@
             <ul class="list-group list-group-flush rounded-3">
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                 <i class="fa fa-user text-warning"></i>
-                <a href="" class="text-warning">Teacher</a>
+                <a href="{{url('/sudent-attendance')}}" class="text-warning">Student Attendance</a>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                 <i class="fa fa-user text-warning"></i>
