@@ -1,25 +1,29 @@
 <?php
 
-namespace App\Http\Livewire\Student;
+namespace App\Http\Livewire\Teacher;
 
 use Livewire\Component;
-use App\Models\studentAttendance;
-use App\Models\student;
+use App\Models\teacherAttendance;
+use App\Models\teacher\teacher;
+use Session;
 
-class StudentAttendanceComponent extends Component
+class TeacherAttendanceComponent extends Component
 {
+
     public $name;
     public $roll = [];
     public $attendance = [];
     public $lc = [];
 
-
     public function render()
     {
-        $student = student::join('Users','Users.roll',"=",'studets.roll')->get();
-        return view('livewire.student.student-attendance-component',['student'=>$student])->layout('layout-common-student');
+        $teacher_id = Session::get('teacher_roll');
+        
+        $teacher = teacher::join('Users','Users.roll',"=",'teachers.teacher_id')
+                            ->where('roll',$teacher_id)
+                            ->get();
+        return view('livewire.teacher.teacher-attendance-component',['teachers'=>$teacher])->layout('layout-common-student');
     }
-    
     public function saveAttendance()
     {
           try{
@@ -27,14 +31,14 @@ class StudentAttendanceComponent extends Component
             {
                 if(!is_null($this->attendance[$i]) ){
                     
-                    studentAttendance::create([
-                        'student_id' => $this->attendance[$i],
+                    teacherAttendance::create([
+                        'teacher_id' => $this->attendance[$i],
                         'attendance' => true,
                         'lc' => false
                     ]);
                 }elseif(!is_null($this->lc[$i])){
-                    studentAttendance::create([
-                        'student_id' => $this->attendance[$i],
+                    teacherAttendance::create([
+                        'teacher_id' => $this->attendance[$i],
                         'attendance' => false,
                         'lc' => true
                     ]);

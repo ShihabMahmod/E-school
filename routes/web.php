@@ -30,6 +30,8 @@ use App\Http\Livewire\teacher\teacherProfileComponent;
 use App\Http\Livewire\teacher\teacherListComponent;
 use App\Http\Livewire\teacher\teacherPersonanInfoComponent;
 use App\Http\Livewire\teacher\classTeacherListComponent;
+use App\Http\Livewire\teacher\teacherAttendanceComponent;
+use App\Http\Livewire\teacher\approveTeacherAttendance;
 
 
 use App\Http\Livewire\notVerifiedComponent;
@@ -73,6 +75,7 @@ Route::get('/set-payment',paymentSetComponent::class);
 Route::get('/set-student-payment',setStudentPaymentCompoonent::class);
 
 
+
 /*..................Teacher......................*/
 
 Route::get('/teacher-profile',teacherProfileComponent::class)->middleware('checkTeacher');
@@ -80,7 +83,8 @@ Route::get('/teacher-personal-information',teacherPersonanInfoComponent::class);
 Route::get('/teacher-list',teacherListComponent::class);
 Route::get('/class-teacher-list',classTeacherListComponent::class);
 Route::get('/add-subject',subjectComponent::class);
-
+Route::get('/teacher-attendance',teacherAttendanceComponent::class);
+Route::get('/approve-teacher-attendance',approveTeacherAttendance::class);
 
 
 

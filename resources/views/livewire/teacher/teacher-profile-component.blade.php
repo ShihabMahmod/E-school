@@ -24,7 +24,7 @@
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                 <i class="fa fa-user text-warning"></i>
-                <a href="" class="text-warning">Student</a>
+                <a href="{{url('/teacher-attendance')}}" class="text-warning">My Attendance</a>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                 <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>

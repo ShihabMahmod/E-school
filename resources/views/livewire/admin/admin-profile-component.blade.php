@@ -139,7 +139,7 @@
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                     <i class="fa fa-users text-warning" style="color: #ac2bac;"></i>
-                    <a href="" class="text-warning">Add Somthing</a>
+                    <a href="{{url('/approve-teacher-attendance')}}" class="text-warning">Approve teacher attendance</a>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                     <i class=" fa fa-book text-warning"></i>
